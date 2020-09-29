@@ -17,8 +17,9 @@ module.exports = class Reload extends Command {
         /**
          * @type {CommandHandler}
          */
-        const handler = this.client.commandHandler
-        handler.reloadAll()
+        this.client.commandHandler.reloadAll()
+        this.client.inhibitorHandler.reloadAll()
+        this.client.listenerHandler.reloadAll()
         await msg.react('✔')
     }
 }

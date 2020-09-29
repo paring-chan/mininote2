@@ -20,7 +20,8 @@ module.exports = class MiniNoteClient extends AkairoClient {
 
     constructor() {
         super({
-            ownerID: config.owner
+            ownerID: config.owner,
+            
         }, {
             disableMentions: 'everyone'
         })
@@ -35,13 +36,15 @@ module.exports = class MiniNoteClient extends AkairoClient {
         this.listenerHandler = new ListenerHandler(this, {
             directory: path.resolve(path.join(__dirname, '..', 'listeners'))
         })
-        this.listenerHandler.loadAll()
-        this.commandHandler.loadAll()
-        this.inhibitorHandler.loadAll()
         this.listenerHandler.setEmitters({
             commandHandler: this.commandHandler,
             inhibitorHandler: this.inhibitorHandler,
             listenerHandler: this.listenerHandler
         })
+        this.listenerHandler.loadAll()
+        this.commandHandler.loadAll()
+        this.commandHandler.useInhibitorHandler(this.inhibitorHandler)
+        this.inhibitorHandler.loadAll()
+        
     }
 }
