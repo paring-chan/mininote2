@@ -1,0 +1,18 @@
+{
+    "token": "",
+    "owner": ["628595345798201355"],
+    "prefix": "노트야 ",
+    "sentry": {
+        "dsn": ""
+    },
+    "database": {
+        "client": "mysql",
+        "connection": {
+            "host": "",
+            "port": 3306,
+            "user": "",
+            "password": "",
+            "database": ""
+        }
+    }
+}
