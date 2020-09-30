@@ -1,8 +1,6 @@
 const { Command } = require("discord-akairo");
 const { Message } = require("discord.js");
-const { reject } = require("lodash");
-const { client } = require("../../util/db");
-const { createEmbed } = require("../../util/Embed");
+
 
 module.exports = class Play extends Command {
     constructor() {
