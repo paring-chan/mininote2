@@ -18,7 +18,8 @@ module.exports = class Play extends Command {
                     type: 'string',
                     match: 'text'
                 }
-            ]
+            ],
+            category: 'music'
         })
     }
     /**
