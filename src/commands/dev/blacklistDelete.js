@@ -3,7 +3,7 @@ const { Message } = require('discord.js');
 const db = require("../../util/db");
 const { createEmbed } = require("../../util/Embed");
 
-module.exports = class Reload extends Command {
+module.exports = class BlacklistDelete extends Command {
     constructor() {
         super('blacklistremove', {
             ownerOnly: true,

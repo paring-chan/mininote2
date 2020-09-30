@@ -5,7 +5,7 @@ const db = require("../../util/db");
 const { createEmbed } = require("../../util/Embed");
 const pagination = require("../../util/pagination");
 
-module.exports = class Reload extends Command {
+module.exports = class Blacklist extends Command {
     constructor() {
         super('blacklist', {
             ownerOnly: true,
