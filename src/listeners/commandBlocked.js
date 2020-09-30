@@ -2,7 +2,7 @@ const { Listener, Command } = require("discord-akairo");
 const { Message } = require('discord.js');
 const { createEmbed } = require("../util/Embed");
 
-module.exports = class ReadyListener extends Listener {
+module.exports = class commandBlocked extends Listener {
     constructor() {
         super('commandBlocked', {
             emitter: 'commandHandler',
