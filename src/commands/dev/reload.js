@@ -17,9 +17,13 @@ module.exports = class Reload extends Command {
         /**
          * @type {CommandHandler}
          */
-        this.client.commandHandler.reloadAll()
-        this.client.inhibitorHandler.reloadAll()
-        this.client.listenerHandler.reloadAll()
+        Object.keys(require.cache).filter(r => !r.includes('node_modules')).forEach(r => delete require.cache[r])
+        this.client.commandHandler.categories.forEach(c => c.removeAll())
+        this.client.listenerHandler.categories.forEach(c => c.removeAll())
+        this.client.inhibitorHandler.categories.forEach(c => c.removeAll())
+        this.client.commandHandler.loadAll()
+        this.client.listenerHandler.loadAll()
+        this.client.inhibitorHandler.loadAll()
         await msg.react('✔')
     }
 }

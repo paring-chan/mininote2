@@ -14,7 +14,8 @@ module.exports = class Evaluate extends Command {
                     prompt: {
                         start: '스크립트를 입력해주세요'
                     },
-                    type: 'string'
+                    type: 'string',
+                    match: 'text'
                 }
             ],
             category: 'dev'

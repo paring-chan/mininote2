@@ -15,6 +15,7 @@ module.exports = class ReadyListener extends Listener {
             console.error('Shard only')
             return process.exit(0)
         }
+        this.client.music.init(this.client.user.id)
         Sentry.setTag('part', `Shard #${this.client.shard.ids.reduce((acc,cur) => acc+cur)}`)
         console.log(`Shard #${this.client.shard.ids.reduce((acc,cur) => acc+cur)} ready.`)
         console.log('processing guilds....')

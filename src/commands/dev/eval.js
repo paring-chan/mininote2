@@ -14,7 +14,7 @@ module.exports = class Evaluate extends Command {
                     prompt: {
                         start: '스크립트를 입력해주세요'
                     },
-                    type: 'string'
+                    match: 'text'
                 }
             ],
             category: 'dev'
@@ -23,11 +23,11 @@ module.exports = class Evaluate extends Command {
 
     /**
      * @param {Message} msg
-     * @param {{script: string}} script 
+     * @param {{script: string}} script
      */
     async exec(msg, {script}) {
         const embed = createEmbed(msg).setTitle('Eval')
-        const input = script.replace(/^```/,'').replace(/```$/, '')
+        const input = script.replace(/^```(js)?/,'').replace(/```$/, '')
         embed.addField('INPUT', '```js\n' +
             (input.length > 1000 ? (input.slice(0,1000) + '...') : input).replace('`', '\\`')
             + '```')
@@ -37,7 +37,7 @@ module.exports = class Evaluate extends Command {
              * @type {string}
              */
             let d = res
-            if (typeof res !== 'string') d = require('util').inspect(res, {depth: 0})
+            if (typeof res !== 'string') d = require('util').inspect(res)
             embed.setColor('GREEN')
             return d.length > 1000 ? (d.slice(0,1000) + '...') : d
         }).catch(err => {
