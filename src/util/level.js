@@ -1,0 +1,1 @@
+module.exports.getNeedLevel = level => level * level * 100
