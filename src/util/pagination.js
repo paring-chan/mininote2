@@ -7,7 +7,7 @@ const { MessageEmbed } = require('discord.js')
  * @param {() => Promise<Array<string>>} get
  * @param {number} size
  * @param {MessageEmbed} em
- * @returns {boolean}
+ * @returns {Promise<boolean>}
  */
 module.exports = async (msg, get, size, em) => {
     const data = await get()
