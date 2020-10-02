@@ -37,6 +37,7 @@ module.exports = class MakePIC extends Command {
         const path = require('path')
 
         require('canvas').registerFont(path.join(path.resolve('.'), 'fonts', 'JetBrainsMono-ExtraBold.ttf'), { family: 'JetBrainsMono ExtraBold' })
+        require('canvas').registerFont(path.join(path.resolve('.'), 'fonts', 'NotoSansCJKkr-Black.otf'), { family: 'NotoSans CJK KR Black' })
 
         const canvas = require('canvas').createCanvas(1000, 1000)
 
@@ -52,7 +53,7 @@ module.exports = class MakePIC extends Command {
 
         ctx.fillStyle = 'white'
 
-        ctx.font = size + 'px JetBrainsMono ExtraBold'
+        ctx.font = size + 'px JetBrainsMono ExtraBold, NotoSans CJK KR Black'
 
         ctx.fillText(content, canvas.width / 2, canvas.height / 2)
 
