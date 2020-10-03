@@ -4,3 +4,4 @@ container_name: mininote2
 
 volumes:
     - ./config.json:/app/config.json
+    - ./data/dev.sqlite3:/app/dev.sqlite3
