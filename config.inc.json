@@ -6,13 +6,16 @@
         "dsn": ""
     },
     "database": {
-        "client": "mysql",
+        "client": "sqlite3",
         "connection": {
-            "host": "",
-            "port": 3306,
-            "user": "",
-            "password": "",
-            "database": ""
+            "filename": "./dev.sqlite3"
         }
-    }
+    },
+    "nodes": [
+        {
+            "host": "localhost",
+            "port": 2333,
+            "password": "youshallnotpass"
+        }
+    ]
 }

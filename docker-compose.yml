@@ -1,7 +1,8 @@
-build: .
+bot:
+    build: .
 
-container_name: mininote2
+    container_name: mininote2
 
-volumes:
-    - ./config.json:/app/config.json
-    - ./data/dev.sqlite3:/app/dev.sqlite3
+    volumes:
+        - ./config.json:/app/config.json
+        - ./data:/app/data
