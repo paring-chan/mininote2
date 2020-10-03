@@ -14,7 +14,7 @@ module.exports = class Register extends Command {
      * @param {Message} msg 
      */
     async exec(msg) {
-        if ((await db('users').where('id', msg.author.id))[0]) return msg.util.send('가입 안했잖아요')
+        if (!(await db('users').where('id', msg.author.id))[0]) return msg.util.send('가입 안했잖아요')
         const embed = createEmbed(msg)
         embed.setTitle('미니노트 서비스 탈퇴')
         embed.setDescription([
