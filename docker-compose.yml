@@ -1,0 +1,6 @@
+build: .
+
+container_name: mininote2
+
+volumes:
+    - ./config.json:/app/config.json

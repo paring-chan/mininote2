@@ -1,0 +1,5 @@
+config.json
+config.inc.json
+.idea
+.vscode
+migrations
