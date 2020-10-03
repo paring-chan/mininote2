@@ -19,7 +19,7 @@ module.exports = class CommandError extends Listener {
             const user = (await db('users').where({id: msg.author.id}))[0]
             if (!user) return
             await db('users').increment('galgories', 1).where('id', msg.author.id)
-            await msg.channel.send(`갈고리 줍줍(${user.galgories+1}개)`)
+            return msg.channel.send(`갈고리 줍줍(${user.galgories+1}개)`)
         }
     }
 }
