@@ -15,8 +15,10 @@ module.exports = class CommandError extends Listener {
      */
     async exec(msg) {
         if (msg.content === '?') {
-            const user = await db('users').where({id: msg.author.id})
-            
+            const user = (await db('users').where({id: msg.author.id}))[0]
+            if (!user) return
+            await db('users').increment('galgories', 1)
+            await msg.channel.send(`갈고리 줍줍(${user.galgories+1}개)`)
         }
     }
 }
