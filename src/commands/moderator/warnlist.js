@@ -26,9 +26,8 @@ module.exports = class Play extends Command {
         const embed = createEmbed(msg)
         if ((!warns[user.id] || !warns[user.id].length) && user !== 'all') return msg.util.reply('경고가 없는데요')
         if (user === 'all') {
-            if (!Object.keys(warns).length) return msg.util.reply('경고가 없는데요')
-            if (!Object.values(warns).reduce((acc,cur)=> [...acc,...cur]).length) return msg.util.reply('경고가 없는데요')
-            console.log(Object.values(warns).reduce((acc,cur)=> [...acc,...cur]))
+            if (!Object.keys(warns).filter(r=>msg.guild.members.cache.get(r)).length) return msg.util.reply('경고가 없는데요')
+            if (!Object.values(warns).filter(r=>msg.guild.members.cache.get(r)).reduce((acc,cur)=> [...acc,...cur]).length) return msg.util.reply('경고가 없는데요')
             embed.setTitle('경고 목록 - 전체')
             if (!await pagination(msg, async () => Object.keys(warns).map(r => warns[r].map(j=>({...j,tag:msg.guild.member(r).user.tag}))).reduce((acc,cur)=> {
                 return [...acc,...cur]

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4b128c7-928b-47a0-bd74-0cc41e19806c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/commands/dev/blacklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/dev/blacklist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/dev/blacklistAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/dev/blacklistAdd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/moderator/unwarn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/moderator/unwarn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/moderator/warn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/moderator/warn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/moderator/warnlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/moderator/warnlist.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1iLTSdS5IuWbEaOt0BTRebx4wwG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="ts.external.directory.path" value="C:\Users\PIKOKR\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\202.7319.49\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4b128c7-928b-47a0-bd74-0cc41e19806c" name="Default Changelist" comment="" />
+      <created>1601685874003</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601685874003</updated>
+      <workItem from="1601685875097" duration="1118000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="781" y="384" key="SettingsEditor" timestamp="1601686802913">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="781" y="384" key="SettingsEditor/0.40.2560.1400/2560.40.1920.1040@0.40.2560.1400" timestamp="1601686802913" />
+    <state x="943" y="355" width="672" height="678" key="search.everywhere.popup" timestamp="1601685976685">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="943" y="355" width="672" height="678" key="search.everywhere.popup/0.40.2560.1400/2560.40.1920.1040@0.40.2560.1400" timestamp="1601685976685" />
+  </component>
+</project>

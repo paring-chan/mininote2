@@ -21,7 +21,8 @@ module.exports = class Play extends Command {
                     match: 'rest',
                     default: '사유 없음'
                 }
-            ]
+            ],
+            userPermissions: ['ADMINISTRATOR']
         })
     }
     /**

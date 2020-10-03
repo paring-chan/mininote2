@@ -1,8 +1,7 @@
-const { Command, CommandHandler } = require("discord-akairo");
-const { Message } = require('discord.js');
-const knexfile = require("../../../knexfile");
+const {Command} = require("discord-akairo");
+const {Message} = require('discord.js');
 const db = require("../../util/db");
-const { createEmbed } = require("../../util/Embed");
+const {createEmbed} = require("../../util/Embed");
 const pagination = require("../../util/pagination");
 
 module.exports = class Blacklist extends Command {
@@ -15,7 +14,7 @@ module.exports = class Blacklist extends Command {
     }
 
     /**
-     * @param {Message} msg 
+     * @param {Message} msg
      */
     async exec(msg) {
         if (!await pagination(msg, async () => {

@@ -22,7 +22,8 @@ module.exports = class Play extends Command {
                         start: '경고 ID 입력하삼'
                     }
                 }
-            ]
+            ],
+            userPermissions: ['ADMINISTRATOR']
         })
     }
     /**

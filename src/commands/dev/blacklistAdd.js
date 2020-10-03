@@ -1,7 +1,7 @@
-const { Command, CommandHandler } = require("discord-akairo");
-const { Message } = require('discord.js');
+const {Command} = require("discord-akairo");
 const db = require("../../util/db");
-const { createEmbed } = require("../../util/Embed");
+const {createEmbed} = require("../../util/Embed");
+const {Message} = require('discord.js')
 
 module.exports = class BlacklistAdd extends Command {
     constructor() {
@@ -28,12 +28,14 @@ module.exports = class BlacklistAdd extends Command {
     }
 
     /**
-     * @param {Message} msg 
+     * @param {Message} msg
+     * @param {string} id
+     * @param {string} reason
      */
-    async exec(msg, {id, reason}) {
+    exec = async (msg, {id, reason}) => {
         const u = (await db('blacklists').where('id', id))[0]
         if (u) return msg.util.send('already in blacklist')
         await db('blacklists').insert({id, reason})
-        await msg.util.send(createEmbed(msg).setTitle('블랙리스트 추가').addField('유저 ID', id,true).addField('사유', reason,true))
-    }
+        await msg.util.send(createEmbed(msg).setTitle('블랙리스트 추가').addField('유저 ID', id, true).addField('사유', reason, true))
+    };
 }
