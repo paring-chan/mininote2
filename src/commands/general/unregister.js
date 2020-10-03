@@ -29,6 +29,6 @@ module.exports = class Register extends Command {
         })
         if (collected.size === 0) return msg.util.send('취소되었습니다(시간초과)')
         await db('users').delete().where('id', msg.author.id)
-        await msg.util.send('가입이 완료되었습니다.')
+        await msg.util.send('탈퇴가 완료되었습니다.')
     }
 }

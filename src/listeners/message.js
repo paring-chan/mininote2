@@ -14,6 +14,7 @@ module.exports = class CommandError extends Listener {
      * @param {Message} msg 
      */
     async exec(msg) {
+        if (msg.content === '') return
         if (/^(\?{0,})$/.test(msg.content)) {
             const user = (await db('users').where({id: msg.author.id}))[0]
             if (!user) return
